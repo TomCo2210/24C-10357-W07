@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "583599190992",
+    "project_id": "a24c-10357-w07",
+    "storage_bucket": "a24c-10357-w07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583599190992:android:b5f55e9ff10e607971bfd5",
+        "android_client_info": {
+          "package_name": "dev.tomco.a24c_10357_w07"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583599190992-hdrj9henkf1iqvtdvj8ofmgnrpec1lhq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.tomco.a24c_10357_w07",
+            "certificate_hash": "c637d490ee72983a2c58cd53308738040e6d8cfc"
+          }
+        },
+        {
+          "client_id": "583599190992-kc05q3mgico2og2gchoeohudp2iiitik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNDI_V6lmvt2zXVPrF-cxd-ZPZGReAAOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583599190992-kc05q3mgico2og2gchoeohudp2iiitik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
