@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/movie_CV_poster"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:layout_marginVertical="@dimen/poster_default_margin"
+        android:layout_marginStart="@dimen/poster_default_margin"
+        android:elevation="@dimen/poster_elevation"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="@dimen/poster_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/movie_CV_data"
+        app:layout_constraintStart_toStartOf="@id/movie_CV_data"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/movie_IMG_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            tools:src="@drawable/background_gradient" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/movie_CV_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/poster_default_margin"
+        android:layout_marginStart="@dimen/data_margin"
+        android:layout_marginEnd="@dimen/poster_default_margin"
+        android:elevation="@dimen/data_elevation"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="@dimen/data_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/data_margin"
+            android:layout_marginEnd="@dimen/poster_default_margin">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/movie_IMG_favorite"
+                android:layout_width="@dimen/heart_dimens"
+                android:layout_height="@dimen/heart_dimens"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:layout_marginEnd="@dimen/poster_default_margin"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/empty_heart" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_LBL_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/poster_default_margin"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:layout_toStartOf="@+id/movie_IMG_favorite"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold"
+                tools:text="Movie Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_LBL_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_LBL_title"
+                android:layout_alignStart="@id/movie_LBL_title"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:layout_marginEnd="@dimen/poster_default_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/other_text_size"
+                tools:text="2024-01-01" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_LBL_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_LBL_title"
+                android:layout_alignEnd="@id/movie_IMG_favorite"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/other_text_size"
+                tools:text="00h 00m" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_LBL_genres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_LBL_year"
+                android:layout_alignStart="@id/movie_LBL_title"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:layout_marginEnd="@dimen/poster_default_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/other_text_size"
+                tools:text="Action, Comedy, Family..." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_LBL_actors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_LBL_genres"
+                android:layout_alignStart="@id/movie_LBL_title"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:layout_marginEnd="@dimen/poster_default_margin"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/other_text_size"
+                tools:text="Actor name1, Actor name2..." />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_LBL_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_LBL_actors"
+                android:layout_alignStart="@id/movie_LBL_title"
+                android:layout_marginTop="@dimen/poster_default_margin"
+                android:layout_marginEnd="@dimen/poster_default_margin"
+                android:maxLines="3"
+                android:minLines="1"
+                android:textSize="@dimen/other_text_size"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel dolor auctor, bibendum lectus sit amet, bibendum velit. Nunc euismod, odio eget eleifend aliquet, nibh nibh malesuada risus, vel pretium nunc eros at elit. Donec finibus ultrices quam a luctus. Curabitur lobortis massa id sapien aliquam, id congue mi lobortis. Fusce id aliquam ante. Nullam congue velit ac bibendum eleifend. Nulla quis gravida odio, vel rutrum risus. Ut tincidunt, justo in fermentum bibendum, mauris mauris malesuada metus, ut eleifend augue lectus ut ex. Nam ut mollis ante." />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/move_RTNG_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_LBL_overview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="@dimen/poster_default_margin"
+                android:progressTint="@color/rating_first"
+                android:secondaryProgressTint="@color/rating_second"
+                android:isIndicator="true"
+                android:stepSize="0.5"
+                tools:rating="3.7"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

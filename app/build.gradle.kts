@@ -57,4 +57,9 @@ dependencies {
     //Authentication:
     implementation(libs.firebase.ui.auth)
 
+    //Realtime Database:
+    implementation(libs.firebase.database)
+
+    //Glide:
+    implementation (libs.glide)
 }

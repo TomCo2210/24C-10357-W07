@@ -4,3 +4,5 @@
 - Firebase Authentication
 - Firebase AuthUI
 - Firebase Storage
+- Firebase Realtime Database
+- Firebase Firestore

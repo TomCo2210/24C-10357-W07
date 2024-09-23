@@ -3,10 +3,7 @@ package dev.tomco.a24c_10357_w07
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -48,14 +45,17 @@ class LoginActivity : AppCompatActivity() {
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
             .setLogo(R.drawable.watching_a_movie)
+            .setTheme(R.style.Theme__24C10357W07)
             .build()
         signInLauncher.launch(signInIntent)
     }
 
     private fun transactToNextScreen() {
-        intent = Intent(this, MainActivity::class.java)
+        intent = Intent(this, MovieListActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()
+
     }
 
 
